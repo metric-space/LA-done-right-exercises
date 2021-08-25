@@ -62,9 +62,29 @@ there $(1)$ becomes
 \end{equation*}
 $\blacksquare$
 
+\subsubsection*{Q5}
+To prove:
+\begin{equation*}
+    \alpha + \left( \beta + \gamma \right) = \left( \alpha + \beta \right) + \gamma \textrm{ }\forall \alpha \textrm{,} \beta \textrm{,} \gamma \in \mathbb{C}
+\end{equation*}
+Assuming $\alpha = a + bi$, $\beta = c + di$, and $\gamma = e + fi$ \\
+evaluating $\alpha + \left( \beta + \gamma \right)$
+\begin{equation*}
+    \begin{split}
+        \alpha + \left( \beta + \gamma \right) &= (a + bi) + \Big( (c + di ) + (e + fi) \Big) \\
+                                               &= (a + bi) + \Big( (c + e) + (d + f)i \Big)  \textrm{ (From addition of complex numbers)}\\
+                                               &=  \Big(a + ( c + e) \Big) + \Big( b + ( d + f) \Big) i\textrm{ (From addition of complex numbers)} \\
+                                               &= \Big( (a + c) + e \Big) + \Big( (b + d) + f \Big) i\textrm{  (from associativity of real numbers)} \\
+                                               &= \Big( (a + c) + (b +d )i \Big) + (e + fi) \textrm{ (Bidirectionality of addition of complex numbers)} \\
+                                               &= \Big( (a+ bi) + (c + di) \Big) + (e + fi) \textrm{ (Bidirectionality of addition of complex numers)} \\
+                                               &= (\alpha + \beta) + \gamma
+    \end{split}
+\end{equation*}
+$\blacksquare$
+
+\subsubsection*{Q6}
 
 
 
 
 \end{document}
-
