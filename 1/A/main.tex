@@ -87,4 +87,45 @@ $\blacksquare$
 
 
 
+
+\subsubsection*{Q7}
+To prove: $\forall \alpha \in \mathbb{C} \textrm{ , } \exists \beta \in \mathbb{C}$ such that $\alpha + \beta = 0$ \\
+Assumption:
+\begin{enumerate}
+    \item if $\alpha \in \mathbb{C}$, then $\alpha$ can be written as $(a + bi)$ where both a and b are real numbers i.e $a,b\in \mathbb{R}$
+    \item $\forall \alpha \in \mathbb{R} \textrm{,} \exists (-\alpha) \textrm{ such that } \alpha + (-\alpha) = 0$ 
+\end{enumerate}
+Proof:\\
+Let $\alpha \in \mathbb{C}$, so from our assumption it can be written in the form (a + bi) \\
+let $\beta \in \mathbb{C}$ such that $\alpha + \beta = 0$, again from our assumption $\beta$ can be written in the form (x + yi) \\
+\begin{equation*}
+\begin{split}
+    (a + bi) + (x + yi) &= 0 \\
+    (a+x) + (b + y)i &= 0 \textrm{ (from addition of complex numbers)} \\
+    (a + x) + (b + y)i &= 0 + 0i \textrm{ (zero of the complex number field)}
+\end{split}
+\end{equation*}
+
+from the last equation above, we equate the real and imaginary parts of both the L.H.S and the R.H.S to each other, we get \\
+\begin{gather*}
+    a + x = 0 \\
+    b + y = 0
+\end{gather*}
+Using assumption (2) we arrive at $x = -a$ and $y = -b$ \\
+so $\beta = (-a + (-b)i) = -(a+bi) = -\alpha$ \\
+
+Proof of uniqueness: (Proof by contradiction) \\
+There exists another unique complex number $\gamma $ such that $\alpha + \gamma = 0$
+\begin{align*}
+    \alpha + \gamma &= 0 \textrm{ (From assumption above)} \\
+    \alpha + \beta &= 0 + \beta \textrm{ (Adding $\beta$ to both sides)} \\
+    0 + \gamma &= \beta \textrm{ (From proven result and concept of 0)} \\
+    \gamma = \beta
+\end{align*}
+This disproves our assumption, hence $\beta$ is unique in that $\forall \alpha \in \mathbb{C} \textrm{ , } \exists \beta \in \mathbb{C}$ such that $\alpha + \beta = 0 \textrm{ and $\beta$ is unique}$ 
+
+
+
+
 \end{document}
+
