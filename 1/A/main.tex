@@ -213,4 +213,105 @@ $\alpha\gamma=1$
   \gamma &= \beta  \textrm{ (multiplicative identity defined on $\mathbb{C}$)}
 \end{align*}
 disproving our assumption and hence $\beta$ is unique $\blacksquare$
+
+
+
+\subsubsection*{Q9}
+To prove:
+$\lambda(\alpha + \beta) = \lambda\alpha + \lambda\beta \text{ ,
+}\forall\lambda,\beta,\gamma \in \mathbb{C}$ \\
+Assumption: 
+\begin{enumerate}
+\item if $\alpha \in \mathbb{C}$, then $\alpha$ can be written as $(a + bi)$ where both a and b are real numbers i.e $a,b\in \mathbb{R}$
+\end{enumerate}
+Proof: \\
+Let
+\begin{align*}
+  \alpha &= a + bi \\
+  \beta  &= c + di \\
+  \lambda &= x + yi
+\end{align*}
+Evaluation $\lambda(\alpha + \beta)$
+\begin{align*}
+  \lambda(\alpha + \beta) &= (x + yi)\Big((a+bi) + (c+di)\Big) \\
+                          &= (x+yi)\Big((a+c) + (b+d)i\Big) \textrm{ (from addition defined on $\mathbb{C}$) } \\
+                          &= \Big( x(a+c) - y(b+d) \Big) + \Big(x(b+d) + y(a+c) \Big)i \textrm{ (from multiplication defined on $\mathbb{C}$) } \\
+                          &= (xa + cd - yb -yd) + (xb + xd + ya +yc)i \\
+                          &= (xa-yb) + (xb+ya)i + (xc-yd) + (xd + yc) i\\
+                          &= (x+yi)(a+bi) + (x+yi)(c+di) \\
+  &= \lambda\alpha + \lambda\beta
+\end{align*}
+$\blacksquare$
+
+
+
+\subsection*{Q10}
+Find: x $\in\mathbb{R}^4$ such that $(4,-3,1,7) + 2x = (5,9,-6,8)$ \\
+Solution:\\
+because x $\in\mathbb{R}^4$ we can assume x to be of form (a,b,c,d) and we get
+the equation
+\begin{equation*}
+  (4,-3,1,7) + 2(a,b,c,d) = (5,9,-6,8)
+\end{equation*}
+we get 4 equations
+\begin{align*}
+  4 + 2a &= 5 \\
+  3 + 2b &= 9 \\
+  1 + 2c &= -6 \\
+  7 + 2d &= 8 
+\end{align*}
+and 
+\begin{align*}
+  a &= \frac{1}{2} \\
+  b &= 6 \\
+  c &= -\frac{7}{2} \\
+  d &=  \frac{1}{2}
+\end{align*}
+
+
+\subsection*{Q11}
+To show $\lambda \notin \mathbb{C}$ such that
+$\lambda(2-3i,5+4i,-6+7i) = (12-5i, 7 + 22i, -32-9i) $
+Assumption: 
+\begin{enumerate}
+\item $\lambda$ is of form (a+bi) because $ lambda \in \mathbb{C}$
+\end{enumerate}
+Because we have scalar multiplication defined on $\mathbb{F}^n$ \\
+$\lambda(2-3i,5+4i,-6+7i) = (12-5i, 7 + 22i, -32-9i)$ becomes \\
+$\Big(\lambda(2-3i),\lambda(5+4i),\lambda(-6+7i)\Big) = (12-5i, 7 + 22i,
+-32-9i)$ \\
+so because of that we three equations
+\begin{align}
+  \lambda(2-3i) &= 12 - 5i \\
+  \lambda(5+4i) &= 7 + 22i \\
+  \lambda(-6+7i) &= -32-9i
+\end{align} 
+From (4) we have
+
+\begin{align*}
+  \lambda(2-3i) &= 12 - 5i \\
+  (a+bi)(2-3i) &= 12 - 5i \textrm{ (definition of $\lambda$)} \\
+  (2a + 3b) + (-3a + 2b)i &= 12 + 5i \textrm{ (multiplication defined on $\mathbb{C}$)}
+\end{align*}
+Equating the real and imaginary parts of the last equation we get
+\begin{align}
+  2a + 3b &= 12 \\
+ -3a + 2b &= -5
+\end{align} 
+Multiplying (7) with 3 and (8) with 2 we have
+\begin{alignat*}{2}
+  & \phantom{-}6a &+ 9b & = 36 \\
+  +\hspace*{.5em} &-6a &+ 4b & = -10 \\
+  \cline{1-4} \\
+  && 13b&  = 26
+\end{alignat*}
+hence b = 2 , a=3 and $\lambda = (2 + 3i)$ \\
+substituting the value of $\lambda$ in  (6) we have
+\begin{align*}
+  (2 + 3i)(-6 + 7i) &= (-12-21) + (14-18)i \\
+   &= -33 - 4i \neq -32 + 9i 
+ \end{align*}
+ hence there cannot be  $\lambda \notin \mathbb{C}$ such that
+ $\lambda(2-3i,5+4i,-6+7i) = (12-5i, 7 + 22i, -32-9i) $
+ $\blacksquare$
 \end{document}
