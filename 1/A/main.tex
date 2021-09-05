@@ -1,3 +1,8 @@
+%%% Local Variables:
+%%% TeX-engine: default
+%%% End:
+
+
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
@@ -83,9 +88,34 @@ evaluating $\alpha + \left( \beta + \gamma \right)$
 $\blacksquare$
 
 \subsubsection*{Q6}
-
-
-
+To prove:
+\begin{equation*}
+  \alpha\left(\beta\gamma \right) = \left( \alpha \beta \right) \gamma \textrm{ }\forall \alpha \textrm{,} \beta \textrm{,} \gamma \in \mathbb{C}
+\end{equation*}
+Assuming
+\begin{align*}
+  \alpha &= a + bi \\
+  \beta &= c + di \\
+  \gamma &= e + fi
+\end{align*}
+It will do us well to remember the general formula of complex number
+multiplication i.e
+\begin{equation*}
+  (u + vi)(x + yi) = (ux - vy) + (vx + uy)i
+\end{equation*}  
+Proof:\\
+Evaluating $(\alpha\beta)\gamma$ \\
+\begin{align*}
+  (\alpha\beta)\gamma &= \Big( (a+bi)(c+di) \Big)(e+fi) \\
+                      &= \Big((ac - bd) + (ad + cb)i\Big)(e+fi) \\
+                      &= ((ac - bd)e - f(ad +cb)) + ((ac-bd)f + e(ad + cb))i \\
+                      &= (ace -bde - fad - fcb) + (acf - bdf + ead + ecb)i \\
+                      &= (a(ce-fd)-b(de + fc)) + (a(de+fc) + b(ce - fd))i \\
+                      &= (a + bi) ((ce-fd) + (de+fc)i) \\
+                      &= (a+bi)\Big( (c+di)(e + fi) \Big) \\
+                      &= \alpha (\beta\gamma)
+\end{align*} 
+$\blacksquare$
 
 
 \subsubsection*{Q7}
@@ -123,9 +153,64 @@ There exists another unique complex number $\gamma $ such that $\alpha + \gamma 
     \gamma = \beta
 \end{align*}
 This disproves our assumption, hence $\beta$ is unique in that $\forall \alpha \in \mathbb{C} \textrm{ , } \exists \beta \in \mathbb{C}$ such that $\alpha + \beta = 0 \textrm{ and $\beta$ is unique}$ 
+$\blacksquare$
 
 
-
-
+\subsubsection*{Q8}
+To prove: $\forall \alpha \in \mathbb{C} \textrm{ , with } \alpha \neq 0
+\textrm{ , } \exists \beta \in \mathbb{C} \textrm{ , } (\alpha\beta =1) \land
+(\beta\textrm{ is unique})
+$ \\
+Assumption: 
+\begin{enumerate}
+\item if $\alpha \in \mathbb{C}$, then $\alpha$ can be written as $(a + bi)$ where both a and b are real numbers i.e $a,b\in \mathbb{R}$
+\end{enumerate}
+Proof: \\
+For a general complex number $\alpha$ which can represented as $a + bi$ (from
+assumption) we will try to find a complex number $\beta$ such that $\alpha\beta
+= 1$ whose components (real
+and imaginary) can be expressed in terms $\alpha$'s real and imaginary
+components (i.e a and b) \\
+We take $\beta = c + di$ \\
+\begin{align*}
+  \alpha\beta &= 1 \\
+  (a + bi)(c + di) &= 1 \\
+  (ac-bd) + (ad+bc)i &= 1 + 0i \textrm{ from multiplication of two complex numbers} \\
+\end{align*}
+Equating the real and complex parts of the L.H.S to the R.H.S \\
+\begin{gather}
+  ac - bd = 1 \\
+  ad + bc = 0 
+\end{gather}
+Multiplying (1) with -b and (2) with a we have
+\begin{alignat*}{2}
+    & -abc &+ b^{2}d & = -b \\
+    +\hspace*{.5em} &\phantom{-}abc &+ a^{2}d & = 0 \\
+    \cline{1-4} \\
+    && (a^2 + b^2)d &  = -b
+\end{alignat*}
+and therefore we have  $d =\frac{-b}{ a^2 + b^2}$ and if we plug this into (2)
+we have
+\begin{align*}
+  ac &= 1 + bd \textrm{ (from (2))} \\
+  ac &= 1 + b(\frac{-b}{a^2 + b^2}) \\
+  ac &= 1 - \frac{b^2}{a^2 + b^2} \\
+  c &= \frac{a^2}{a(a^2 + b^2)} \\
+  c &= \frac{a}{a^2 + b^2}
+\end{align*}
+Therefore $\forall \alpha \in \mathbb{C} \textrm{ , with } \alpha \neq 0
+\textrm{ , } \exists \beta \in \mathbb{C} \textrm{ , } \alpha\beta =1 \textrm{
+  where } \beta = \frac{a}{a^2 + b^2} + \frac{-b}{a^2 + b^2}i$ \\
+\textbf{Proof of uniqueness (proof by contradiction):}\\
+Let's assume there exists another complex number other than $\beta$, $\gamma$ such that
+$\alpha\gamma=1$
+\begin{align*}
+  \alpha\gamma &= 1 \textrm{ (from assumption)} \\
+  (\alpha\gamma)\beta &= \beta \textrm{ (multiplying both sides with $\beta$)} \\
+  (\gamma\alpha)\beta &= \beta \textrm{ (commutativity of multiplication on $\mathbb{C}$)}\\
+  \gamma(\alpha\beta) &= \beta \textrm{ (associativity of multiplication on $\mathbb{C}$)}\\
+  \gamma.1 &= \beta \textrm{ (from above construction of beta such $\alpha\beta = 1$)} \\
+  \gamma &= \beta  \textrm{ (multiplicative identity defined on $\mathbb{C}$)}
+\end{align*}
+disproving our assumption and hence $\beta$ is unique $\blacksquare$
 \end{document}
-
